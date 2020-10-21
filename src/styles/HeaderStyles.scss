@@ -1,0 +1,10 @@
+$xtoken-purple: #9500FC;
+$xtoken-font-base: #322879;
+
+.header-cols {
+  border-bottom: 2px solid $xtoken-purple;
+  margin: 0px !important;
+  color: $xtoken-font-base;
+  font-weight: 500;
+  font-size: 1.5rem;
+}

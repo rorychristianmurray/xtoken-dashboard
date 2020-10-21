@@ -1,0 +1,24 @@
+$xtoken-purple: #9500FC;
+$xtoken-font-base: #322879;
+$hover-bg: #E5E5E5;
+
+// STACK CARD
+
+.x-card {
+  border: 1px solid $xtoken-purple;
+  margin: 100px 200px !important;
+}
+
+.x-card-menu {
+  border: 1px solid $xtoken-purple;
+}
+
+.x-card-menu-choice {
+  text-align: center;
+  border: 1px solid $xtoken-purple;
+  color: $xtoken-purple;
+  &:hover {
+    color: #FFFFFF;
+    background: $xtoken-purple;
+  }
+}
