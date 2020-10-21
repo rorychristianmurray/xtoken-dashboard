@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
+import Overview from "./Overview"
+import { getContractAbi } from "../assets/constants"
 import "../styles/XCardStyles.scss"
 
 const XCard = () => {
   const [tab, setTab] = useState("overview")
 
+  console.log("getContractAbi : ", getContractAbi)
+
+  // let c = getContractAbi()
+
   let displayTab
   if (tab === "overview") {
-    displayTab = <div>overview</div>
+    displayTab = <Overview />
   } else if (tab === "avg-mint") {
     displayTab = <div>average mint</div>
-  } else if (tab === "-mint") {
+  } else if (tab === "mint") {
     displayTab = <div>mint</div>
   } else if (tab === "hack") {
     displayTab = <div>hack addresses</div>
@@ -32,7 +38,7 @@ const XCard = () => {
           <div className="column x-card-menu-choice" onClick={() => setTab("mint")}>
             Mint
           </div>
-          <div className="column x-card-menu-choice" onClick={() => setTab("hack-addresses")}>
+          <div className="column x-card-menu-choice" onClick={() => setTab("hack")}>
             Hack Addresses
           </div>
         </div>
