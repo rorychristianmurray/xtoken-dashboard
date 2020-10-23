@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import Overview from "./Overview"
-import { getContractAbi } from "../assets/constants"
 import "../styles/XCardStyles.scss"
 
 const XCard = () => {
   const [tab, setTab] = useState("overview")
-
-  console.log("getContractAbi : ", getContractAbi)
-
-  // let c = getContractAbi()
-
+  
   let displayTab
   if (tab === "overview") {
     displayTab = <Overview />
