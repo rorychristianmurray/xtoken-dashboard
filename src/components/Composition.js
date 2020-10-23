@@ -20,15 +20,15 @@ const Overview = () => {
     })
   }
 
-  // const getMintedViaSNX = () => {
-  //   axios.get('http://localhost:5001/mintedviaeth')
-  //   .then(res => {
-  //     setAvgMinted(res.data.avgMinted)
-  //   })
-  //   .catch(err => {
-  //     console.log("err : ", err)
-  //   })
-  // }
+  const getMintedViaSNX = () => {
+    axios.get('http://localhost:5001/mintedviasnx')
+    .then(res => {
+      setMintedSNX(res.data.mintedViaSNX)
+    })
+    .catch(err => {
+      console.log("err : ", err)
+    })
+  }
 
 
   return (
@@ -40,7 +40,7 @@ const Overview = () => {
       </div>
 
       <div className="column">
-        <div className="button get-minted-btn" onClick={getMintedViaETH}>get minted via SNX</div>
+        <div className="button get-minted-btn" onClick={getMintedViaSNX}>get minted via SNX</div>
         <div>SNX % : {mintedSNX}% </div>
       </div>
 
