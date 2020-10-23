@@ -30,6 +30,17 @@ const Overview = () => {
     })
   }
 
+  const getMedianMinted = () => {
+    axios.get('http://localhost:5001/medianminted')
+    .then(res => {
+      console.log("res.data : ", res.data)
+      setMedianMinted(res.data.medianMinted)
+    })
+    .catch(err => {
+      console.log("err : ", err)
+    })
+  }
+
   return (
     <div className="columns">
 
@@ -41,6 +52,11 @@ const Overview = () => {
       <div className="column">
         <div className="button get-minted-btn" onClick={getAverageMinted}>get avg minted</div>
         <div>avg minted : {avgMinted} </div>
+      </div>
+
+      <div className="column">
+        <div className="button get-minted-btn" onClick={getMedianMinted}>get median minted</div>
+        <div>median minted : {medianMinted} </div>
       </div>
 
     </div>
