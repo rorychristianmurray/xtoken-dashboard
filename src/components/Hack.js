@@ -48,7 +48,7 @@ const Hack = () => {
 
           <div className="overview-det"><span   className="overview-det-name">Total Hacked :</span> {hacked.length}</div>
 
-          <div className="overview-det"><span   className="overview-det-name">Total Suspects :</span> {Object. keys(potentials).length}</div>
+          <div className="overview-det"><span className="overview-det-name">Total Suspects :</span> {potentials.length}</div>
 
         </div>
       </div>
