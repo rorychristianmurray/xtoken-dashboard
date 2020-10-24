@@ -6,7 +6,7 @@ const Overview = () => {
   const [mintedSNX, setMintedSNX] = useState(0)
 
   const getMintedViaETH = () => {
-    axios.get('http://localhost:5001/mintedviaeth')
+    axios.get('https://xtoken-server.herokuapp.com/mintedviaeth')
     .then(res => {
       setMintedETH(res.data.mintedViaETH)
     })
@@ -16,7 +16,7 @@ const Overview = () => {
   }
 
   const getMintedViaSNX = () => {
-    axios.get('http://localhost:5001/mintedviasnx')
+    axios.get('https://xtoken-server.herokuapp.com/mintedviasnx')
     .then(res => {
       setMintedSNX(res.data.mintedViaSNX)
     })

@@ -13,7 +13,7 @@ const Hack = () => {
   }, [])
 
   const getAllHacked = () => {
-    axios.get('http://localhost:5001/hacked')
+    axios.get('https://xtoken-server.herokuapp.com/hacked')
     .then(res => {
       let h = []
       for (const v of Object.values(res.data.hacked)) {
@@ -27,7 +27,7 @@ const Hack = () => {
   }
 
   const getPotentials = () => {
-    axios.get('http://localhost:5001/potentials')
+    axios.get('https://xtoken-server.herokuapp.com/potentials')
     .then(res => {
       console.log("res : ", res)
       let s = []

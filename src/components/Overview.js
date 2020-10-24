@@ -9,7 +9,7 @@ const Overview = () => {
   const [burns, setBurns] = useState([])
 
   const getMinted = () => {
-    axios.get('http://localhost:5001/mint')
+    axios.get('https://xtoken-server.herokuapp.com/mint')
     .then(res => {
       setMinted(res.data.mintEvents)
     })
@@ -19,7 +19,7 @@ const Overview = () => {
   }
 
   const getAverageMinted = () => {
-    axios.get('http://localhost:5001/avgminted')
+    axios.get('https://xtoken-server.herokuapp.com/avgminted')
     .then(res => {
       setAvgMinted(res.data.avgMinted)
     })
@@ -29,7 +29,7 @@ const Overview = () => {
   }
 
   const getMedianMinted = () => {
-    axios.get('http://localhost:5001/medianminted')
+    axios.get('https://xtoken-server.herokuapp.com/medianminted')
     .then(res => {
       setMedianMinted(res.data.medianMinted)
     })
@@ -39,7 +39,7 @@ const Overview = () => {
   }
 
   const getAllBurns = () => {
-    axios.get('http://localhost:5001/burns')
+    axios.get('https://xtoken-server.herokuapp.com/burns')
     .then(res => {
       setBurns(res.data.burnEvents)
     })
