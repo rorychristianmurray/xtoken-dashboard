@@ -2,7 +2,7 @@ $xtoken-purple: #9500FC;
 $xtoken-font-base: #322879;
 $hover-bg: #E5E5E5;
 
-// STACK CARD
+// X CARD
 
 .x-card {
   border: 1px solid $xtoken-purple;
@@ -10,7 +10,11 @@ $hover-bg: #E5E5E5;
 }
 
 .x-card-menu {
-  border: 1px solid $xtoken-purple;
+  // border: 1px solid $xtoken-purple;
+}
+
+.xtoken-title {
+  color:$xtoken-font-base !important;
 }
 
 .x-card-menu-choice {
@@ -21,4 +25,20 @@ $hover-bg: #E5E5E5;
     color: #FFFFFF;
     background: $xtoken-purple;
   }
+}
+
+// OVERVIEW
+
+.overview-det {
+  margin: 0.2rem 0;
+}
+
+.overview-det-name {
+  font-weight: 600;
+}
+
+// HACK
+.dets-btn {
+  background: $xtoken-purple !important;
+  color: #FFFFFF !important;
 }

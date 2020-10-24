@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Overview from "./Overview"
 import Composition from "./Composition"
+import Hack from "./Hack"
 import "../styles/XCardStyles.scss"
 
 const XCard = () => {
@@ -12,7 +13,7 @@ const XCard = () => {
   } else if (tab === "composition") {
     displayTab = <Composition />
   } else if (tab === "hack") {
-    displayTab = <div>hack addresses</div>
+    displayTab = <Hack />
   }
 
   return (
@@ -20,7 +21,7 @@ const XCard = () => {
       <div className="card-content">
         <div className="media">
           <div className="media-content">
-            <div className="title is-4">xToken Dashboard</div>
+            <div className="title is-4 xtoken-title">xToken Dashboard</div>
           </div>
         </div>
 
@@ -33,7 +34,7 @@ const XCard = () => {
             Composition
           </div>
           <div className="column x-card-menu-choice" onClick={() => setTab("hack")}>
-            Hack Addresses
+            Hacked
           </div>
         </div>
 
