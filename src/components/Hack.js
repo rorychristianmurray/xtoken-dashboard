@@ -4,8 +4,6 @@ import axios from 'axios'
 const Hack = () => {
   const [hacked, setHacked] = useState([])
   const [potentials, setPotentials] = useState([])
-  console.log("hacked : ", hacked)
-  console.log("potentials : ", potentials)
 
   useEffect(() => {
     getAllHacked()
@@ -29,7 +27,6 @@ const Hack = () => {
   const getPotentials = () => {
     axios.get('https://xtoken-server.herokuapp.com/potentials')
     .then(res => {
-      console.log("res : ", res)
       let s = []
       for (const v of Object.values(res.data.potentials)) {
         s.push(v)
@@ -47,7 +44,6 @@ const Hack = () => {
         <div className="column overview-col is-half">
 
           <div className="overview-det"><span   className="overview-det-name">Total Hacked :</span> {hacked.length}</div>
-
           <div className="overview-det"><span className="overview-det-name">Total Suspects :</span> {potentials.length}</div>
 
         </div>
